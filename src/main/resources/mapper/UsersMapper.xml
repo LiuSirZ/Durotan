@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zherke.template.mapper.UsersMapper">
+
+  <resultMap id="BaseResultMap" type="com.zherke.template.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="USER_AGE" jdbcType="VARCHAR" property="userAge" />
+    <result column="USER_GENDER" jdbcType="VARCHAR" property="userGender" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="USER_PASSWORD" jdbcType="VARCHAR" property="userPassword" />
+    <result column="USER_NICK_NAME" jdbcType="VARCHAR" property="userNickName" />
+    <result column="USER_EMAIL" jdbcType="VARCHAR" property="userEmail" />
+  </resultMap>
+
+</mapper>

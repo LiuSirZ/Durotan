@@ -6,13 +6,13 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.web.servlet.config.annotation.*;
 
 /**
- * web相关
+ * web配置相关
  * @author lwb
- *
+ * @date 2018-07-13
  */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurationSupport {
-    
+
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurerAdapter() {

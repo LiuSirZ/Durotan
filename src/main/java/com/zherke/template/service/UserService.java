@@ -1,7 +1,7 @@
 package com.zherke.template.service;
 
+import com.zherke.template.bean.BaseResponseVo;
 import com.zherke.template.pojo.Users;
-import org.springframework.stereotype.Service;
 
 /**
  * @author lwb
@@ -11,4 +11,6 @@ import org.springframework.stereotype.Service;
 public interface UserService {
 
     Users findByUser(Integer userId);
+
+    BaseResponseVo findUserList(Integer userId);
 }

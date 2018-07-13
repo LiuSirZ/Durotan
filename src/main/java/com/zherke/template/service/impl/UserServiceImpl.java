@@ -1,13 +1,18 @@
 package com.zherke.template.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.zherke.template.bean.BaseResponseVo;
 import com.zherke.template.mapper.UsersMapper;
 import com.zherke.template.pojo.Users;
-import com.zherke.template.runner.ApplicationStartRunner;
 import com.zherke.template.service.UserService;
+import com.zherke.template.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author lwb
@@ -27,5 +32,12 @@ public class UserServiceImpl implements UserService {
         Users users = new Users();
         users.setId(userId);
         return usersMapper.selectOne(users);
+    }
+
+    @Override
+    public BaseResponseVo findUserList(Integer userId) {
+        PageHelper.startPage(0,1);
+        List<Users> users = usersMapper.selectAll();
+        return ResponseUtil.success(new PageInfo<Users>(users).getList());
     }
 }

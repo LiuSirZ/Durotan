@@ -27,8 +27,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public BaseResponseVo findUserList(Integer userId) {
-        PageHelper.startPage(0,1);
+
+        PageHelper.startPage(0,10);
         List<Users> users = usersMapper.selectAll();
         return ResponseUtil.success(new PageInfo<Users>(users).getList());
+    }
+
+    @Override
+    public BaseResponseVo findUserByMapper() {
+        List<Users> users = usersMapper.findUserByMapper();
+        return ResponseUtil.success(users);
+    }
+
+    @Override
+    public BaseResponseVo findUserById(Integer userId) {
+        Users user = usersMapper.findUserById(userId);
+        return ResponseUtil.success(user);
     }
 }

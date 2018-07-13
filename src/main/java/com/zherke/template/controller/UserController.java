@@ -23,7 +23,15 @@ public class UserController {
     public BaseResponseVo test(Integer userId){
         return userService.findUserList(userId);
     }
+    @GetMapping("/hello/find")
+    public BaseResponseVo findUserByMapper(){
+        return userService.findUserByMapper();
+    }
 
+    @GetMapping("/hello/findById")
+    public BaseResponseVo findById(Integer userId){
+        return userService.findUserById(userId);
+    }
 
 
 }

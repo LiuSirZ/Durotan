@@ -16,4 +16,27 @@
     <result column="USER_EMAIL" jdbcType="VARCHAR" property="userEmail" />
   </resultMap>
 
+  <sql id="userList">
+      USER_NAME,USER_AGE,USER_GENDER,CREATE_TIME,USER_PASSWORD,USER_NICK_NAME,USER_EMAIL
+  </sql>
+
+  <select id="findUserByMapper" resultMap="BaseResultMap">
+    SELECT
+      <include refid="userList" />
+    FROM USERS
+  </select>
+  <select id="findUserById" parameterType="Integer" resultMap="BaseResultMap">
+    SELECT
+      ID,
+      USER_NAME,
+      USER_AGE,
+      USER_GENDER,
+      CREATE_TIME,
+      USER_PASSWORD,
+      USER_NICK_NAME,
+      USER_EMAIL
+    FROM USERS
+    WHERE ID = #{userId}
+  </select>
+
 </mapper>

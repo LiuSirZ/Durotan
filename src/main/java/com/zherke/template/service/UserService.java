@@ -10,4 +10,8 @@ import com.zherke.template.bean.BaseResponseVo;
 public interface UserService {
 
     BaseResponseVo findUserList(Integer userId);
+
+    BaseResponseVo findUserByMapper();
+
+    BaseResponseVo findUserById(Integer userId);
 }

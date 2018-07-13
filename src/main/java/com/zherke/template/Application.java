@@ -1,5 +1,6 @@
 package com.zherke.template;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -11,19 +12,24 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import tk.mybatis.spring.annotation.MapperScan;
 
+/**
+ * @author lwb
+ * @date 2018-07-13
+ */
+@Slf4j
 @EnableWebMvc
 @RestController
 @SpringBootApplication
 @MapperScan(basePackages = "com.zherke.template.mapper")
 public class Application extends WebMvcConfigurationSupport implements CommandLineRunner {
 
-    private Logger logger = LoggerFactory.getLogger(Application.class);
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
     @Override
     public void run(String... args) throws Exception {
-        logger.info("服务启动完成!");
+        if(log.isInfoEnabled()){
+            log.info("服务启动完成!");
+        }
     }
 }

@@ -1,6 +1,7 @@
 package com.zherke.template.filter;
 
 import com.zherke.template.interceptor.DemoInterceptor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.servlet.*;
@@ -12,26 +13,31 @@ import java.io.IOException;
  * @create 2018-07-11 10:11
  * @desc a demo for filter
  **/
-@WebFilter(filterName="demoFilter",urlPatterns="/*")
+@Slf4j
+@WebFilter(filterName="demoFilter",urlPatterns="/**")
 public class DemoFilter implements Filter{
-
-    private Logger logger = LoggerFactory.getLogger(DemoInterceptor.class);
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        logger.info("filter init.");
+        if(log.isInfoEnabled()){
+            log.info("filter init.");
+        }
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain chain) throws IOException, ServletException {
-        logger.info("filter doFilter.");
+        if(log.isInfoEnabled()){
+            log.info("filter doFilter.");
+        }
         chain.doFilter(request,response);
     }
 
     @Override
     public void destroy() {
-        logger.info("filter destroy.");
+        if(log.isInfoEnabled()){
+            log.info("filter destroy.");
+        }
     }
 
 }

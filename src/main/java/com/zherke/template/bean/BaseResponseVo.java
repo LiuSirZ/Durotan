@@ -2,7 +2,10 @@ package com.zherke.template.bean;
 
 import java.io.Serializable;
 
-
+/**
+ * @author lwb
+ * @param <T>
+ */
 public class BaseResponseVo<T> implements Serializable{
 	private String code;
 	private String msg;

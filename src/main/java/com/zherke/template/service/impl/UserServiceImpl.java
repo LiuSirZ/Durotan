@@ -7,6 +7,7 @@ import com.zherke.template.mapper.UsersMapper;
 import com.zherke.template.pojo.Users;
 import com.zherke.template.service.UserService;
 import com.zherke.template.util.ResponseUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +20,9 @@ import java.util.List;
  * @create 2018-07-11 9:52
  * @desc 用户service实现
  **/
+@Slf4j
 @Service
 public class UserServiceImpl implements UserService {
-
-    private Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private UsersMapper usersMapper;

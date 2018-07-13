@@ -1,5 +1,6 @@
 package com.zherke.template.runner;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -12,14 +13,15 @@ import org.springframework.stereotype.Component;
  * @desc a demo for runner
  **/
 @Component
+@Slf4j
 @Order(value = 1)
 public class ApplicationStartRunner implements CommandLineRunner {
-
-    private Logger logger = LoggerFactory.getLogger(ApplicationStartRunner.class);
 
     @Override
     public void run(String... args) throws Exception {
         //TODO 服务启动执行 处理加载数据等操作
-        logger.info(">>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作<<<<<<<<<<<<<");
+        if(log.isInfoEnabled()){
+            log.info(">>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作<<<<<<<<<<<<<");
+        }
     }
 }

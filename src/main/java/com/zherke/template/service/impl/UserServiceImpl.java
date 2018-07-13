@@ -8,8 +8,6 @@ import com.zherke.template.pojo.Users;
 import com.zherke.template.service.UserService;
 import com.zherke.template.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,13 +24,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UsersMapper usersMapper;
-
-    @Override
-    public Users findByUser(Integer userId) {
-        Users users = new Users();
-        users.setId(userId);
-        return usersMapper.selectOne(users);
-    }
 
     @Override
     public BaseResponseVo findUserList(Integer userId) {

@@ -1,7 +1,6 @@
 package com.zherke.template.service;
 
 import com.zherke.template.bean.BaseResponseVo;
-import com.zherke.template.pojo.Users;
 
 /**
  * @author lwb
@@ -9,8 +8,6 @@ import com.zherke.template.pojo.Users;
  * @desc 用户service
  **/
 public interface UserService {
-
-    Users findByUser(Integer userId);
 
     BaseResponseVo findUserList(Integer userId);
 }

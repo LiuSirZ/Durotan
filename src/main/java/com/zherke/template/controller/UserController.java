@@ -19,7 +19,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/hello")
+    @GetMapping("/hello/test")
     public BaseResponseVo test(Integer userId){
         return userService.findUserList(userId);
     }

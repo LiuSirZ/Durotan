@@ -1,9 +1,6 @@
 package com.zherke.template.servlet;
 
-import com.zherke.template.service.impl.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

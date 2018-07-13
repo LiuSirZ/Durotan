@@ -8,6 +8,7 @@ import com.zherke.template.pojo.Users;
 import com.zherke.template.service.UserService;
 import com.zherke.template.util.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public BaseResponseVo findUserByMapper() {
-        List<Users> users = usersMapper.findUserByMapper();
+//        List<Users> users = usersMapper.findUserByMapper();
+        //lombok 中可使用var代替其他类型 类似 JDK10
+        var users = usersMapper.findUserByMapper();
+        
         return ResponseUtil.success(users);
     }
 

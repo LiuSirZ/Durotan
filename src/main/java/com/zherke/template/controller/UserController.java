@@ -1,10 +1,11 @@
 package com.zherke.template.controller;
 
+import com.zherke.template.conf.ConfigProperties;
+import lombok.extern.slf4j.Slf4j;
 import com.zherke.template.bean.BaseResponseVo;
 import com.zherke.template.service.UserService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,16 +20,17 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/hello/test")
+    @PostMapping("/hello/test")
     public BaseResponseVo test(Integer userId){
         return userService.findUserList(userId);
     }
-    @GetMapping("/hello/find")
+
+    @PostMapping("/hello/find")
     public BaseResponseVo findUserByMapper(){
         return userService.findUserByMapper();
     }
 
-    @GetMapping("/hello/findById")
+    @PostMapping("/hello/findById")
     public BaseResponseVo findById(Integer userId){
         return userService.findUserById(userId);
     }

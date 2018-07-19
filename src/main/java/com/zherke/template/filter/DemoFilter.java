@@ -1,6 +1,7 @@
 package com.zherke.template.filter;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
@@ -11,11 +12,12 @@ import java.io.IOException;
  * @desc a demo for filter
  **/
 @Slf4j
-@WebFilter(filterName="demoFilter",urlPatterns="/**")
+@Component
+@WebFilter(filterName="demoServlet",urlPatterns="/**")
 public class DemoFilter implements Filter{
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         if(log.isInfoEnabled()){
             log.info("filter init.");
         }

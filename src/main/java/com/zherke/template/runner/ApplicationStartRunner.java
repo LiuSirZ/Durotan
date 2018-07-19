@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 @Order(value = 1)
 public class ApplicationStartRunner implements CommandLineRunner {
 
+
     @Override
     public void run(String... args) throws Exception {
         //TODO 服务启动执行 处理加载数据等操作

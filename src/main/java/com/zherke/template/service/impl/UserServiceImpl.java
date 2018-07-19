@@ -39,12 +39,13 @@ public class UserServiceImpl implements UserService {
 //        List<Users> users = usersMapper.findUserByMapper();
         //lombok 中可使用var代替其他类型 类似 JDK10
         var users = usersMapper.findUserByMapper();
-        
+
         return ResponseUtil.success(users);
     }
 
     @Override
     public BaseResponseVo findUserById(Integer userId) {
+        
         Users user = usersMapper.findUserById(userId);
         return ResponseUtil.success(user);
     }

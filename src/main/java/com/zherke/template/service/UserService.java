@@ -8,6 +8,7 @@ import com.zherke.template.bean.BaseResponseVo;
  * @desc 用户service
  **/
 public interface UserService {
+
     /**
      * 使用通用Mapper查询列表
      * @param userId

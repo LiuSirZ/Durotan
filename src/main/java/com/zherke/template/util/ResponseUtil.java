@@ -72,8 +72,8 @@ public class ResponseUtil {
 
     /**
      * 返回失败
-     * code:{@link com.zherke.template.bean.CommonResultCode#FAILD}
-     * msg:{@link com.zherke.template.bean.CommonResultCode#FAILD}
+     * code:{@link com.zherke.template.bean.CommonResultCode#FAIL}
+     * msg:{@link com.zherke.template.bean.CommonResultCode#FAIL}
      *
      * @param msg 失败信息(必填)
      * @return
@@ -84,15 +84,15 @@ public class ResponseUtil {
 
     /**
      * 返回失败
-     * code:{@link com.zherke.template.bean.CommonResultCode#FAILD}
-     * msg:{@link com.zherke.template.bean.CommonResultCode#FAILD}
+     * code:{@link com.zherke.template.bean.CommonResultCode#FAIL}
+     * msg:{@link com.zherke.template.bean.CommonResultCode#FAIL}
      *
      * @param msg  失败信息(必填)
      * @param data 响应数据
      * @return
      */
     public static BaseResponseVo faild(String msg, Object data) {
-        return response(CommonResultCode.FAILD.getCode(), msg == null ? CommonTipConstant.FAILED_KEY : msg, data);
+        return response(CommonResultCode.FAIL.getCode(), msg == null ? CommonTipConstant.FAILED_KEY : msg, data);
     }
 
     /**
@@ -121,14 +121,14 @@ public class ResponseUtil {
 
     /**
      * 返回系统异常
-     * code:{@link com.zherke.template.bean.CommonResultCode#UNKNOW_ERROR}
-     * msg:{@link com.zherke.template.bean.CommonResultCode#UNKNOW_ERROR}
+     * code:{@link com.zherke.template.bean.CommonResultCode#UNKNOWN_ERROR}
+     * msg:{@link com.zherke.template.bean.CommonResultCode#UNKNOWN_ERROR}
      *
      * @param data 响应数据
      * @return BaseResponseVo
      */
     public static BaseResponseVo systemException(Object data) {
-        return response(CommonResultCode.UNKNOW_ERROR.getCode(), CommonTipConstant.UNKNOW_ERROR_KEY, data);
+        return response(CommonResultCode.UNKNOWN_ERROR.getCode(), CommonTipConstant.UNKNOW_ERROR_KEY, data);
     }
 
 }

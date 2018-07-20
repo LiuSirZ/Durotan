@@ -8,10 +8,12 @@ import java.io.Serializable;
  */
 public enum CommonResultCode implements Serializable {
 
-    SUCCESS("00", "成功"),
-    FAILD("01", "无失败信息"),
-    UNKNOW_ERROR("99", "系统繁忙，请稍后再试"),
-    SYSTEM_INSIDE_ERROR("98", "系统内部错误");
+    SUCCESS("200", "成功"),
+    FAIL("400", "失败"),
+    UNKNOWN_ERROR("99", "系统繁忙，请稍后再试"),
+    SYSTEM_INSIDE_ERROR("500", "系统内部错误"),
+    NOT_FOUND("404","接口不存在"),
+    UNAUTHORIZED("401","未认证（签名错误）");
 
     private String code;
     private String msg;

@@ -2,6 +2,8 @@ package com.zherke.template.service;
 
 import com.zherke.template.bean.BaseResponseVo;
 
+import java.io.FileNotFoundException;
+
 /**
  * @author lwb
  * @create 2018-07-11 9:51
@@ -28,4 +30,12 @@ public interface UserService {
      * @return
      */
     BaseResponseVo findUserById(Integer userId);
+
+    /**
+     * 使用easyExcel输出Excel
+     * @param userId
+     * @return
+     * @throws FileNotFoundException
+     */
+    BaseResponseVo writeExcel(Integer userId) throws FileNotFoundException;
 }

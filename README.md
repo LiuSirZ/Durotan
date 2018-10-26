@@ -1,4 +1,4 @@
-# SpringBoot 基础架构(未进行性能调优，待完善版本)
+# 基于SpringBoot的基础项目架构(未进行性能调优，待完善版本)
 ## 旨在快速搭建SpringBoot项目以及整合其他框架 
 ### 项目参考 [ lihengming/spring-boot-api-project-seed ](https://github.com/lihengming/spring-boot-api-project-seed "lihengming/spring-boot-api-project-seed")
 ### 一、当前架构

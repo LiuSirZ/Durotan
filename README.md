@@ -8,5 +8,5 @@
 通过注释帮助我们生成常用的代码 例如set/get，log等。减少重复性工作
 #### 2）cors
 解决跨域问题。
-#### 3）mybatis& 通用Mapper
+#### 3）mybatis & 通用Mapper
 持久层选择使用市面常用的mybatis，同样使用通用Mapper提供单表操作的基础方法。减少开发人员工作量。

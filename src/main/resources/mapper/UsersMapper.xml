@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zherke.template.mapper.UsersMapper">
-
-    <resultMap id="BaseResultMap" type="com.zherke.template.pojo.Users">
+<mapper namespace="com.zherke.mapper.UsersMapper">
+    <resultMap id="BaseResultMap" type="com.zherke.pojo.Users">
         <!--
           WARNING - @mbg.generated
         -->
@@ -15,7 +14,6 @@
         <result column="USER_NICK_NAME" jdbcType="VARCHAR" property="userNickName" />
         <result column="USER_EMAIL" jdbcType="VARCHAR" property="userEmail" />
     </resultMap>
-
     <sql id="userList">
         USER_NAME,USER_AGE,USER_GENDER,CREATE_TIME,USER_PASSWORD,USER_NICK_NAME,USER_EMAIL
     </sql>

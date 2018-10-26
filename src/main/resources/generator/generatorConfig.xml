@@ -11,7 +11,7 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.durotan.util.MyMapper"/>
+            <property name="mappers" value="com.zherke.durotan.util.MyMapper"/>
         </plugin>
 
         <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
@@ -20,11 +20,11 @@
                         password="${spring.datasource.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.durotan.pojo" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.zherke.durotan.pojo" targetProject="src/main/java"/>
 
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
 
-        <javaClientGenerator targetPackage="com.durotan.mapper" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.zherke.durotan.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
         <table tableName="USERS">

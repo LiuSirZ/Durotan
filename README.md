@@ -1,6 +1,7 @@
 # 基于SpringBoot的基础项目架构(未进行性能调优，待完善版本)
 ## 旨在快速搭建SpringBoot项目以及整合其他框架 
 ### 项目参考 [ lihengming/spring-boot-api-project-seed ](https://github.com/lihengming/spring-boot-api-project-seed "lihengming/spring-boot-api-project-seed")
+### 开发工具推荐 IntelliJ IDEA 。[参考文档](http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/ "IntelliJ IDEA")
 ### 一、当前架构
 #### 1.SpringBoot + mybatis + 通用Mapper + Project Lombok + cors 
 ### 二、插件介绍
@@ -11,9 +12,9 @@
 解决跨域问题。
 #### 3）mybatis & 通用Mapper
 持久层选择使用市面常用的mybatis，同样使用通用Mapper提供单表操作的基础方法。减少开发人员工作量。<br/>
-更多详情 [mybatis/mybatis-3](https://github.com/mybatis/mybatis-3 "mybatis/mybatis-3")
+更多详情[mybatis/mybatis-3](https://github.com/mybatis/mybatis-3 "mybatis/mybatis-3")
 #### 4）alibaba/easyexcel
-快速、简单避免OOM的java处理Excel工具。<br/>
+快速、简单避免OOM的java处理Excel工具<br/>
 更多详情 [alibaba/easyexcel](https://github.com/alibaba/easyexcel)
 ###  三、项目启动方法
 #### 1）修改application-dev.properties

@@ -11,7 +11,7 @@
 #### 2）cors
 解决跨域问题。
 #### 3）mybatis & 通用Mapper
-持久层选择使用市面常用的mybatis，同样使用通用Mapper提供单表操作的基础方法。减少开发人员工作量。<br/>
+持久层选择使用常用的mybatis，同样使用通用Mapper提供单表操作的基础方法。减少开发人员工作量。<br/>
 更多详情[mybatis/mybatis-3](https://github.com/mybatis/mybatis-3 "mybatis/mybatis-3")
 #### 4）alibaba/easyexcel
 快速、简单避免OOM的java处理Excel工具<br/>

@@ -1,5 +1,6 @@
 package com.zherke.durotan.controller;
 
+import com.sun.org.apache.xml.internal.security.exceptions.Base64DecodingException;
 import lombok.extern.slf4j.Slf4j;
 import com.zherke.durotan.bean.BaseResponseVo;
 import com.zherke.durotan.service.UserService;
@@ -7,6 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import sun.misc.BASE64Decoder;
+
+import java.io.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  * @author lwb

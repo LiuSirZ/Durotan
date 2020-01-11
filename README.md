@@ -1,6 +1,6 @@
 # 基于SpringBoot的基础项目架构(未进行性能调优，待完善版本)
-## 旨在快速搭建SpringBoot项目以及整合其他框架 
-### 项目参考 [ lihengming/spring-boot-api-project-seed ](https://github.com/lihengming/spring-boot-api-project-seed "lihengming/spring-boot-api-project-seed")
+## 自主学习 尝试写一些小插件或小功能
+### 项目参考 [ lihengming/spring-boot-api-project-seed ](https://github.com/lihengming/spring-boot-api-project-seed "lihengming/spring-boot-api-project-seed")
 ### 开发工具推荐 IntelliJ IDEA 。[参考文档](http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/ "IntelliJ IDEA")
 ### 一、当前架构
 #### 1.SpringBoot + mybatis + 通用Mapper + Project Lombok + cors 

@@ -5,7 +5,9 @@ import com.zherke.durotan.enums.SensitiveTypeEnum;
 import java.lang.annotation.*;
 
 /**
- * 返回参数字段是否加密注解
+ * 返回参数字段
+ * isDesensitization：是否脱敏操作
+ * sensitiveType：    脱敏字段类型
  * @author lwb
  * @since 2020/01/10
  * @version 1.0

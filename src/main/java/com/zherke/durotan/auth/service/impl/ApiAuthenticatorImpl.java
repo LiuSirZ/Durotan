@@ -24,7 +24,21 @@ public class ApiAuthenticatorImpl implements ApiAuthenticator {
 
     @Override
     public void auth(String url) throws Exception {
+        //根据url获取请求实体 调用实体校验方法
         ApiRequest apiRequest = ApiRequest.formatFromUrl(url);
+        this.executeAuth(apiRequest);
+    }
+
+    @Override
+    public void auth(ApiRequest apiRequest) throws Exception {
+        executeAuth(apiRequest);
+    }
+
+    /**
+     * 实际通用鉴权方法
+     * @param apiRequest
+     */
+    private void executeAuth(ApiRequest apiRequest) throws Exception {
         String appId = apiRequest.getAppId();
         String token = apiRequest.getToken();
         long timestamp = apiRequest.getTimestamp();
@@ -43,10 +57,5 @@ public class ApiAuthenticatorImpl implements ApiAuthenticator {
         if(!authToken.match(clientAuthToken)){
             throw new ServiceException("token验证失败");
         }
-    }
-
-    @Override
-    public void auth(ApiRequest apiRequest) {
-
     }
 }

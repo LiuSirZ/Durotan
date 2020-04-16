@@ -13,5 +13,5 @@ public interface SensitiveAlgorithm {
     /**
      * 执行脱敏算法
      */
-    void excuteSensitive(Field field, Object object);
+    void executeSensitive(Field field, Object object);
 }

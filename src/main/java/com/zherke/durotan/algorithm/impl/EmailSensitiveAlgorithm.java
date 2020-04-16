@@ -3,9 +3,6 @@ package com.zherke.durotan.algorithm.impl;
 import com.zherke.durotan.algorithm.SensitiveAlgorithm;
 import com.zherke.durotan.util.SensitiveUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-
-import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -19,10 +16,10 @@ import java.lang.reflect.Method;
 public class EmailSensitiveAlgorithm implements SensitiveAlgorithm {
 
     @Override
-    public void excuteSensitive(Field field, Object object) {
+    public void executeSensitive(Field field, Object object) {
 
         if(log.isDebugEnabled()){
-            log.debug("EmailSensitiveAlgorithm excute");
+            log.debug("EmailSensitiveAlgorithm execute");
         }
 
         Class<?> clazz = object.getClass();
@@ -34,7 +31,7 @@ public class EmailSensitiveAlgorithm implements SensitiveAlgorithm {
                 if(invoke instanceof String){
                     String temp = (String) invoke;
                     //调用脱敏逻辑
-                    invoke = temp.replace("liuwenbiao","1111");
+                    invoke = executeDesensitization(temp);
                 }
                 field.set(object, invoke);
             } catch (Exception e) {
@@ -45,5 +42,14 @@ public class EmailSensitiveAlgorithm implements SensitiveAlgorithm {
                 }
             }
         }
+    }
+
+    /**
+     * 脱敏操作逻辑实现
+     * @param temp
+     * @return
+     */
+    private Object executeDesensitization(String temp) {
+        return temp;
     }
 }

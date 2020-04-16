@@ -1,6 +1,6 @@
 package com.zherke.durotan.util;
 
-import com.zherke.durotan.algorithm.ExcuteSensitiveAlgorithmContext;
+import com.zherke.durotan.algorithm.executeSensitiveAlgorithmContext;
 import com.zherke.durotan.algorithm.SensitiveAlgorithm;
 import com.zherke.durotan.algorithm.impl.*;
 import com.zherke.durotan.annotation.Desensitization;
@@ -64,7 +64,7 @@ public class SensitiveUtil {
      * 解析方法
      * @param clazz
      */
-    public static void excute(Object object) throws IntrospectionException {
+    public static void execute(Object object) throws IntrospectionException {
 
         //Map格式单独处理
         if(object instanceof Map){
@@ -87,13 +87,13 @@ public class SensitiveUtil {
                     // 注解是否开启状态
                     if(annotation.isDesensitization()){
 
-                        ExcuteSensitiveAlgorithmContext excute = null;
-                        excute = switchExcute(annotation);
+                        executeSensitiveAlgorithmContext execute = null;
+                        execute = switchexecute(annotation);
                         //设置需要脱敏的字段属性
-                        excute.setField(field);
-                        excute.setObj(object);
+                        execute.setField(field);
+                        execute.setObj(object);
                         //执行脱敏算法
-                        excute.excuteSensitive();
+                        execute.executeSensitive();
                     }
                 }
             }
@@ -103,42 +103,42 @@ public class SensitiveUtil {
 
     /**
      * 选取脱敏执行类
-     * @param excute
+     * @param execute
      */
-    private static ExcuteSensitiveAlgorithmContext switchExcute(Desensitization annotation) {
-        ExcuteSensitiveAlgorithmContext excute = null;
+    private static executeSensitiveAlgorithmContext switchexecute(Desensitization annotation) {
+        executeSensitiveAlgorithmContext execute = null;
         switch (annotation.sensitiveType()){
             case PASSWORD:
-                excute = new ExcuteSensitiveAlgorithmContext(passwordSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(passwordSensitiveAlgorithm);
                 break;
             case EMAIL:
-                excute = new ExcuteSensitiveAlgorithmContext(emailSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(emailSensitiveAlgorithm);
                 break;
             case ID_CARD:
-                excute = new ExcuteSensitiveAlgorithmContext(idCardSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(idCardSensitiveAlgorithm);
                 break;
             case ACCOUNT_NO:
-                excute = new ExcuteSensitiveAlgorithmContext(accountNoSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(accountNoSensitiveAlgorithm);
                 break;
             case FIXED_PHONE:
-                excute = new ExcuteSensitiveAlgorithmContext(fixedPhoneSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(fixedPhoneSensitiveAlgorithm);
                 break;
             case CHINESE_NAME:
-                excute = new ExcuteSensitiveAlgorithmContext(chineseNameSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(chineseNameSensitiveAlgorithm);
                 break;
             case MOBILE_PHONE:
-                excute = new ExcuteSensitiveAlgorithmContext(mobilePhoneSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(mobilePhoneSensitiveAlgorithm);
                 break;
             default:
-                excute = new ExcuteSensitiveAlgorithmContext(baseSensitiveAlgorithm);
+                execute = new executeSensitiveAlgorithmContext(baseSensitiveAlgorithm);
         }
-        return excute;
+        return execute;
     }
 
     public static void main(String[] args) throws IntrospectionException {
         Users u = new Users();
         u.setUserEmail("liuwenbiao12138@163.com");
-        SensitiveUtil.excute(u);
+        SensitiveUtil.execute(u);
         System.out.println(u);
     }
 

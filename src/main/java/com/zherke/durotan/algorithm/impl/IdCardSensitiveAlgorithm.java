@@ -15,7 +15,7 @@ import java.lang.reflect.Field;
 public class IdCardSensitiveAlgorithm implements SensitiveAlgorithm {
 
     @Override
-    public void excuteSensitive(Field field, Object object) {
-        log.info("IdCardSensitiveAlgorithm excute");
+    public void executeSensitive(Field field, Object object) {
+        log.info("IdCardSensitiveAlgorithm execute");
     }
 }

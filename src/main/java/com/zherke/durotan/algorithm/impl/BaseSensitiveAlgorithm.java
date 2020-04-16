@@ -15,7 +15,7 @@ import java.lang.reflect.Field;
 public class BaseSensitiveAlgorithm implements SensitiveAlgorithm {
 
     @Override
-    public void excuteSensitive(Field field, Object object) {
+    public void executeSensitive(Field field, Object object) {
 
     }
 }

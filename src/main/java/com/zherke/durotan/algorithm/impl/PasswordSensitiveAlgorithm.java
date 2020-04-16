@@ -18,9 +18,9 @@ import java.lang.reflect.Method;
 public class PasswordSensitiveAlgorithm implements SensitiveAlgorithm {
 
     @Override
-    public void excuteSensitive(Field field, Object object) {
+    public void executeSensitive(Field field, Object object) {
 
-        log.info("PasswordSensitiveAlgorithm excute。");
+        log.info("PasswordSensitiveAlgorithm execute。");
         Class<?> clazz = object.getClass();
         for (; clazz != Object.class; clazz = clazz.getSuperclass()) {
             try {

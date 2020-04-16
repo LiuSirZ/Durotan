@@ -15,7 +15,7 @@ import java.lang.reflect.Field;
 public class FixedPhoneSensitiveAlgorithm implements SensitiveAlgorithm {
 
     @Override
-    public void excuteSensitive(Field field, Object object) {
-        log.info("FixedPhoneSensitiveAlgorithm excute");
+    public void executeSensitive(Field field, Object object) {
+        log.info("FixedPhoneSensitiveAlgorithm execute");
     }
 }

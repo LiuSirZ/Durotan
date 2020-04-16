@@ -30,7 +30,7 @@ public class SensitiveAlgorithmInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
         List list = (List)modelAndView.getModel().get("");
         for (Object object : list) {
-            SensitiveUtil.excute(object);
+            SensitiveUtil.execute(object);
         }
     }
 

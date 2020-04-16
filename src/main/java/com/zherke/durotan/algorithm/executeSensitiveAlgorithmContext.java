@@ -8,18 +8,18 @@ import java.lang.reflect.Field;
  * @since 2020/01/20
  * @version 1.0
  */
-public class ExcuteSensitiveAlgorithmContext {
+public class executeSensitiveAlgorithmContext {
 
     private Field field;
     private Object object;
     private SensitiveAlgorithm sensitiveAlgorithm;
 
-    public ExcuteSensitiveAlgorithmContext(SensitiveAlgorithm sensitiveAlgorithm){
+    public executeSensitiveAlgorithmContext(SensitiveAlgorithm sensitiveAlgorithm){
         this.sensitiveAlgorithm = sensitiveAlgorithm;
     }
 
-    public void excuteSensitive(){
-        sensitiveAlgorithm.excuteSensitive(field,object);
+    public void executeSensitive(){
+        sensitiveAlgorithm.executeSensitive(field,object);
     }
 
     public void setField(Field field) {

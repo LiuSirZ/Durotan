@@ -7,7 +7,8 @@
 ### 二、插件介绍
 #### 1）Project Lombok
 通过注释帮助我们生成常用的代码 例如set/get，log等。减少重复性工作。<br/>
-更多详情 [ Project Lombok ](https://projectlombok.org/ "lombok插件")
+更多详情 [ Project Lombok ](https://projectlombok.org/ "lombok插件")
+后期准备逐渐去掉此语法糖。出于对Java封装特性的保护。
 #### 2）cors
 解决跨域问题。
 #### 3）mybatis & 通用Mapper

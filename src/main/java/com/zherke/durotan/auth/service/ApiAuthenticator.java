@@ -21,4 +21,6 @@ public interface ApiAuthenticator {
      * @param apiRequest 封装好的ApiRequest实体
      */
     void auth(ApiRequest apiRequest) throws Exception;
+
+
 }

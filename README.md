@@ -25,8 +25,8 @@
 修改resource/generator下generatorConfig.xml文件。<br/>
 执行generator插件生成pojo。
 #### 3)Maven配置文件添加私人仓库 
-https://repo.rdc.aliyun.com/repository/129414-release-em30Ph
-username：dk4eMd
-password：XR7Ufeh2ga
+https://repo.rdc.aliyun.com/repository/129414-release-em30Ph<br/>
+username：dk4eMd<br/>
+password：XR7Ufeh2ga<br/>
 
 

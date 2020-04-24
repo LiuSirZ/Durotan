@@ -6,6 +6,7 @@ import com.zherke.durotan.auth.service.ApiAuthenticator;
 import com.zherke.durotan.auth.storage.CredentialStorageBase;
 import com.zherke.durotan.exception.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +18,7 @@ import java.util.Map;
  * @since 2020/01/21
  * @version 1.0
  */
+@Component
 public class ApiAuthenticatorImpl implements ApiAuthenticator {
 
     @Autowired
@@ -58,4 +60,6 @@ public class ApiAuthenticatorImpl implements ApiAuthenticator {
             throw new ServiceException("token验证失败");
         }
     }
+
+
 }

@@ -72,9 +72,9 @@ public class ApiRequest {
 
         //解析参数
         String baseUrl = urlPattern[0];
-        String appId = param[0];
-        String token = param[1];
-        long timestamp = Long.parseLong(param[2]);
+        String appId = param[0].split("=")[1];
+        String token = param[1].split("=")[1];
+        long timestamp = Long.parseLong(param[2].split("=")[1]);
 
         //封装ApiRequest
         return new ApiRequest(baseUrl, token, appId, timestamp);

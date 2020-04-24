@@ -8,6 +8,7 @@ import com.zherke.durotan.bean.BaseResponseVo;
 import com.zherke.durotan.bean.CommonResultCode;
 import com.zherke.durotan.exception.ServiceException;
 import com.zherke.durotan.interceptor.DemoInterceptor;
+import com.zherke.durotan.interceptor.TokenAuthInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -140,7 +141,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //TODO 添加拦截器到拦截器组 添加拦截URL以及忽略的URL
-        registry.addInterceptor(new DemoInterceptor()).addPathPatterns("/**").excludePathPatterns("/User/hello");
+        registry.addInterceptor(new TokenAuthInterceptor()).addPathPatterns("/**").excludePathPatterns("/User/hello");
         super.addInterceptors(registry);
     }
 

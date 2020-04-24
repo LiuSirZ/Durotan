@@ -17,6 +17,9 @@
 #### 4）alibaba/easyexcel
 快速、简单避免OOM的java处理Excel工具<br/>
 更多详情 [alibaba/easyexcel](https://github.com/alibaba/easyexcel)
+#### 5) 配置中心 Apollo
+实现配置的动态加载与推送<br/>
+官方开源文档 [Apollo](https://github.com/ctripcorp/apollo/wiki/)
 ###  三、项目启动方法
 #### 1）修改application-dev.properties
 修改application-dev.properties配置文件中数据库地址。<br/>
@@ -24,3 +27,9 @@
 #### 2）使用generator生成实体
 修改resource/generator下generatorConfig.xml文件。<br/>
 执行generator插件生成pojo。
+#### 3)Maven配置文件添加私人仓库 
+https://repo.rdc.aliyun.com/repository/129414-release-em30Ph<br/>
+username：dk4eMd<br/>
+password：XR7Ufeh2ga<br/>
+
+

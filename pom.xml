@@ -187,6 +187,13 @@
             <version>3.3.0</version>
         </dependency>
 
+<!--        自定义Apollo meta-server-address获取-->
+        <dependency>
+            <groupId>xxx</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
+
 <!--        <dependency>-->
 <!--            <groupId>org.apache.curator</groupId>-->
 <!--            <artifactId>curator-recipes</artifactId>-->

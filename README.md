@@ -19,7 +19,13 @@
 更多详情 [alibaba/easyexcel](https://github.com/alibaba/easyexcel)
 #### 5) 配置中心 Apollo
 实现配置的动态加载与推送<br/>
-官方开源文档 [Apollo](https://github.com/ctripcorp/apollo/wiki/)
+官方开源文档 [Apollo](https://github.com/ctripcorp/apollo/wiki/)<br/>
+apollo配置采用SPI方式自定义meta-server获取类<br/>
+详细使用方式如下：<br/>
+需本地搭建Apollo配置中心 搭建方法参考官方文档。<br/>
+打开POM文件中xxx.apollo.client包引用。并且打开ApolloConfig配置文件注释。<br/>
+注：此工程仅限于本地测试 <br/>
+若需要生产定制。参考Apollo官方文档 自行实现生产环境需要的jar 通过SPI方式注入即可
 ###  三、项目启动方法
 #### 1）修改application-dev.properties
 修改application-dev.properties配置文件中数据库地址。<br/>
